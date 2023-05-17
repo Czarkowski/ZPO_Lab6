@@ -17,7 +17,8 @@ public class AppController {
 
     @GetMapping({"/list"})
     public String index(Model model){
-        model.addAttribute("Importances", Importance.values());
+//        model.addAttribute("Importances", Importance.values());
+        model.addAttribute("Importances", com.example.ZPO_Lab6.Importance.values());
         Note note = new Note();
         model.addAttribute("Note",  note);
         List<Note> notes = noteService.listOfNotes();
